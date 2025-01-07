@@ -38,7 +38,7 @@ public class ApiStepDefs {
 
     @Then("the response time should be below {int} milliseconds")
     public void theResponseTimeShouldBeBelowMilliseconds(int time) {
-        Assert.assertTrue(response.time() < time);
+        Assert.assertTrue(response.time() < time); // this step fails because the response time is above 1000ms everytime the test has been run
     }
 
     @Then("the id field should not be null or empty for all items and the type field in episode should always be {string}")
